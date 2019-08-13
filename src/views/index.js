@@ -26,11 +26,13 @@ import { Alerts, Badges, Modals } from './Notifications';
 import { Login, Page404, Page500, Register } from './Pages';
 import { Colors, Typography } from './Theme';
 import Widgets from './Widgets';
+import Stream from './Stream';
 
 export {
   Badges,
   Typography,
   Colors,
+  Stream,
   CoreUIIcons,
   Page404,
   Page500,

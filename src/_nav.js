@@ -10,6 +10,10 @@ export default {
       },
     },
     {
+      name: 'Stream',
+      url: '/stream',
+    },
+    {
       title: true,
       name: 'Theme',
       wrapper: {            // optional wrapper object
