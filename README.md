@@ -2,7 +2,7 @@
 Watch Multiple YouTube Streams at once using PolyTube
 
 Added Features
-- [ ] View 2 streams on single page
+- [X] View 2 streams on single page
 - [ ] Interchangeable live chat on stream sidebar
 - [ ] Search and display streams by channel IDs
 - [ ] Shareable URL for streams

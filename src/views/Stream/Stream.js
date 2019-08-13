@@ -1,6 +1,7 @@
   import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
+import YouTube from 'react-youtube';
 import { Row, Col } from 'reactstrap'
 import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
 
@@ -40,6 +41,31 @@ class ThemeView extends Component {
   }
 }
 
+class StreamPlayer extends React.Component {
+  render() {
+    const opts = {
+      height: '390',
+      width: '640',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 0
+      }
+    };
+ 
+    return (
+      <YouTube
+        videoId="hHW1oY26kxQ"
+        opts={opts}
+        onReady={this._onReady}
+      />
+    );
+  }
+ 
+  _onReady(event) {
+    // access to player in all event handlers via event.target
+    //event.target.pauseVideo();
+  }
+}
+
 class ThemeColor extends Component {
   // constructor(props) {
   //   super(props);
@@ -65,37 +91,13 @@ class Stream extends Component {
   render() {
     return (
       <div className="animated fadeIn">
+        <StreamPlayer>
+        </StreamPlayer>
+        <StreamPlayer>
+        </StreamPlayer>
         <div className="card">
           <div className="card-header">
             <i className="icon-drop"></i> Theme colors
-          </div>
-          <div className="card-body">
-            <Row>
-              <ThemeColor className="bg-primary">
-                <h6>Brand Primary Color</h6>
-              </ThemeColor>
-              <ThemeColor className="bg-secondary">
-                <h6>Brand Secondary Color</h6>
-              </ThemeColor>
-              <ThemeColor className="bg-success">
-                <h6>Brand Success Color</h6>
-              </ThemeColor>
-              <ThemeColor className="bg-danger">
-                <h6>Brand Danger Color</h6>
-              </ThemeColor>
-              <ThemeColor className="bg-warning">
-                <h6>Brand Warning Color</h6>
-              </ThemeColor>
-              <ThemeColor className="bg-info">
-                <h6>Brand Info Color</h6>
-              </ThemeColor>
-              <ThemeColor className="bg-light">
-                <h6>Brand Light Color</h6>
-              </ThemeColor>
-              <ThemeColor className="bg-dark">
-                <h6>Brand Dark Color</h6>
-              </ThemeColor>
-            </Row>
           </div>
         </div>
         <div className="card">
