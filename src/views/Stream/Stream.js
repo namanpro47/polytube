@@ -5,6 +5,7 @@ import YouTube from 'react-youtube';
 import Iframe from 'react-iframe';
 import { Row, Col } from 'reactstrap'
 import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
+import Tabs from '../Base/Tabs';
 
 class ThemeView extends Component {
   constructor(props) {
@@ -98,7 +99,7 @@ class Stream extends Component {
             <StreamPlayer videoId="hHW1oY26kxQ"/>
           </Col>
           <Col>
-            <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+            <Tabs/>
           </Col>
         </Row>
         <div className="card">
