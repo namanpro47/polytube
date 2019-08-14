@@ -90,10 +90,10 @@ class Tabs extends Component {
     return (
       <>
         <TabPane tabId="1">
-          <Iframe width="300px" height="750px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+          <Iframe width="450px" height="750px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
         </TabPane>
         <TabPane tabId="2">
-          <Iframe width="300px" height="750px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+          <Iframe width="450px" height="750px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
         </TabPane>
       </>
     );
@@ -101,7 +101,7 @@ class Tabs extends Component {
 
   render() {
     return (
-      <Col>
+      <Col width="500">
         <Nav tabs>
           <NavItem>
             <NavLink
