@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import YouTube from 'react-youtube';
 import Iframe from 'react-iframe';
-import { Row, Col } from 'reactstrap'
+import {Badge, Col, Nav, NavItem, NavLink, Row, TabContent, TabPane} from 'reactstrap';
 import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
-import Tabs from '../Base/Tabs';
 
 class ThemeView extends Component {
   constructor(props) {
@@ -67,6 +66,66 @@ class StreamPlayer extends React.Component {
     //event.target.pauseVideo();
   }
 }
+
+class Tabs extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      activeTab: new Array(4).fill('1'),
+    };
+  }
+
+  toggle(tabPane, tab) {
+    const newArray = this.state.activeTab.slice()
+    newArray[tabPane] = tab
+    this.setState({
+      activeTab: newArray,
+    });
+  }
+
+  tabPane() {
+    return (
+      <>
+        <TabPane tabId="1">
+          <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+        </TabPane>
+        <TabPane tabId="2">
+          <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+        </TabPane>
+      </>
+    );
+  }
+
+  render() {
+    return (
+      <Nav tabs>
+        <NavItem>
+          <NavLink
+            active={this.state.activeTab[0] === '1'}
+            onClick={() => { this.toggle(0, '1'); }}
+          >
+            Chat 1
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            active={this.state.activeTab[0] === '2'}
+            onClick={() => { this.toggle(0, '2'); }}
+          >
+            Chat 2
+          </NavLink>
+        </NavItem>
+      </Nav>
+      <TabContent activeTab={this.state.activeTab[0]}>
+        {this.tabPane()}
+      </TabContent>
+    );
+  }
+}
+
 
 class ThemeColor extends Component {
   // constructor(props) {
