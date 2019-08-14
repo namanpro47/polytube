@@ -1,4 +1,4 @@
-  import React, { Component } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import YouTube from 'react-youtube';
@@ -54,7 +54,7 @@ class StreamPlayer extends React.Component {
  
     return (
       <YouTube
-        videoId="hHW1oY26kxQ"
+        videoId={this.props.videoId}
         opts={opts}
         onReady={this._onReady}
       />
@@ -94,8 +94,8 @@ class Stream extends Component {
       <div className="animated fadeIn">
         <Row>
           <Col>
-            <StreamPlayer/>
-            <StreamPlayer/>
+            <StreamPlayer videoId="hHW1oY26kxQ"/>
+            <StreamPlayer videoId="hHW1oY26kxQ"/>
           </Col>
           <Col>
             <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
