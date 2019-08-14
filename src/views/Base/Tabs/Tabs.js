@@ -29,10 +29,10 @@ class Tabs extends Component {
     return (
       <>
         <TabPane tabId="1">
-          {`1. ${this.lorem()}`}
+          <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
         </TabPane>
         <TabPane tabId="2">
-          {`2. ${this.lorem()}`}
+          <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
         </TabPane>
         <TabPane tabId="3">
           {`3. ${this.lorem()}`}
