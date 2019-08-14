@@ -101,27 +101,29 @@ class Tabs extends Component {
 
   render() {
     return (
-      <Nav tabs>
-        <NavItem>
-          <NavLink
-            active={this.state.activeTab[0] === '1'}
-            onClick={() => { this.toggle(0, '1'); }}
-          >
-            Chat 1
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            active={this.state.activeTab[0] === '2'}
-            onClick={() => { this.toggle(0, '2'); }}
-          >
-            Chat 2
-          </NavLink>
-        </NavItem>
-      </Nav>
-      <TabContent activeTab={this.state.activeTab[0]}>
-        {this.tabPane()}
-      </TabContent>
+      <div>
+        <Nav tabs>
+          <NavItem>
+            <NavLink
+              active={this.state.activeTab[0] === '1'}
+              onClick={() => { this.toggle(0, '1'); }}
+            >
+              Chat 1
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              active={this.state.activeTab[0] === '2'}
+              onClick={() => { this.toggle(0, '2'); }}
+            >
+              Chat 2
+            </NavLink>
+          </NavItem>
+        </Nav>
+        <TabContent activeTab={this.state.activeTab[0]}>
+          {this.tabPane()}
+        </TabContent>
+      </div>
     );
   }
 }
