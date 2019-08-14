@@ -90,10 +90,10 @@ class Tabs extends Component {
     return (
       <>
         <TabPane tabId="1">
-          <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+          <Iframe width="300px" height="750px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
         </TabPane>
         <TabPane tabId="2">
-          <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+          <Iframe width="300px" height="750px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
         </TabPane>
       </>
     );
@@ -101,7 +101,7 @@ class Tabs extends Component {
 
   render() {
     return (
-      <div>
+      <Col>
         <Nav tabs>
           <NavItem>
             <NavLink
@@ -123,7 +123,7 @@ class Tabs extends Component {
         <TabContent activeTab={this.state.activeTab[0]}>
           {this.tabPane()}
         </TabContent>
-      </div>
+      </Col>
     );
   }
 }
@@ -159,9 +159,7 @@ class Stream extends Component {
             <StreamPlayer videoId="hHW1oY26kxQ"/>
             <StreamPlayer videoId="hHW1oY26kxQ"/>
           </Col>
-          <Col>
-            <Tabs/>
-          </Col>
+          <Tabs/>
         </Row>
         <div className="card">
           <div className="card-header">
