@@ -2,6 +2,7 @@
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import YouTube from 'react-youtube';
+import Iframe from 'react-iframe';
 import { Row, Col } from 'reactstrap'
 import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
 
@@ -95,6 +96,7 @@ class Stream extends Component {
         </StreamPlayer>
         <StreamPlayer>
         </StreamPlayer>
+        <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
         <div className="card">
           <div className="card-header">
             <i className="icon-drop"></i> Theme colors
