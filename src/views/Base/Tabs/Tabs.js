@@ -41,7 +41,7 @@ class Tabs extends Component {
 
   render() {
     return (
-      <div className="animated fadeIn">
+      <div>
         <Row>
           <Col>
             <Nav tabs>
@@ -50,7 +50,7 @@ class Tabs extends Component {
                   active={this.state.activeTab[0] === '1'}
                   onClick={() => { this.toggle(0, '1'); }}
                 >
-                  Home
+                  Chat 1
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -58,7 +58,7 @@ class Tabs extends Component {
                   active={this.state.activeTab[0] === '2'}
                   onClick={() => { this.toggle(0, '2'); }}
                 >
-                  Profile
+                  Chat 2
                 </NavLink>
               </NavItem>
             </Nav>
