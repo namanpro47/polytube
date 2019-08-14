@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Badge, Col, Nav, NavItem, NavLink, Row, TabContent, TabPane} from 'reactstrap';
+import Iframe from 'react-iframe';
 import classnames from 'classnames';
 
 class Tabs extends Component {
