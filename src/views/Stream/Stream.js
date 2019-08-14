@@ -93,7 +93,7 @@ class Tabs extends Component {
           <Iframe width="450px" height="750px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
         </TabPane>
         <TabPane tabId="2">
-          <Iframe width="450px" height="750px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+          <Iframe width="450px" height="750px" src="https://www.youtube.com/live_chat?v=sPeGGyAfVo0&amp;embed_domain=polytubeio.herokuapp.com"/>
         </TabPane>
       </>
     );
@@ -157,7 +157,7 @@ class Stream extends Component {
         <Row>
           <Col>
             <StreamPlayer videoId="hHW1oY26kxQ"/>
-            <StreamPlayer videoId="hHW1oY26kxQ"/>
+            <StreamPlayer videoId="sPeGGyAfVo0"/>
           </Col>
           <Tabs/>
         </Row>
