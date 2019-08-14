@@ -92,11 +92,15 @@ class Stream extends Component {
   render() {
     return (
       <div className="animated fadeIn">
-        <StreamPlayer>
-        </StreamPlayer>
-        <StreamPlayer>
-        </StreamPlayer>
-        <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+        <Row>
+          <Col>
+            <StreamPlayer/>
+            <StreamPlayer/>
+          </Col>
+          <Col>
+            <Iframe width="600px" height="1000px" src="https://www.youtube.com/live_chat?v=hHW1oY26kxQ&amp;embed_domain=polytubeio.herokuapp.com"/>
+          </Col>
+        </Row>
         <div className="card">
           <div className="card-header">
             <i className="icon-drop"></i> Theme colors
