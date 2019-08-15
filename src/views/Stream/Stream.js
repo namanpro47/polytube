@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import YouTube from 'react-youtube';
 import Iframe from 'react-iframe';
-import {Badge, Col, Nav, NavItem, NavLink, Row, TabContent, TabPane} from 'reactstrap';
+import {Badge, Button, Col, Nav, NavItem, NavLink, Row, TabContent, TabPane, Card, CardHeader, CardBody, Form,
+  FormGroup, Input, InputGroup, InputGroupAddon, InputGroupButtonDropdown, InputGroupText} from 'reactstrap';
 import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
 
 class ThemeView extends Component {
@@ -48,7 +49,7 @@ class StreamPlayer extends React.Component {
       height: '390',
       width: '640',
       playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 0
+        autoplay: 1
       }
     };
  
@@ -101,7 +102,7 @@ class Tabs extends Component {
 
   render() {
     return (
-      <Col width="500">
+      <div>
         <Nav tabs>
           <NavItem>
             <NavLink
@@ -123,7 +124,7 @@ class Tabs extends Component {
         <TabContent activeTab={this.state.activeTab[0]}>
           {this.tabPane()}
         </TabContent>
-      </Col>
+      </div>
     );
   }
 }
@@ -150,6 +151,54 @@ class ThemeColor extends Component {
   }
 }
 
+class Search extends Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+  render() {
+    return (
+      <Card>
+        <CardHeader>
+          Example Form
+        </CardHeader>
+        <CardBody>
+          <Form action="" method="post">
+            <FormGroup>
+              <InputGroup>
+                <Input type="text" id="username2" name="username2" placeholder="Username" autoComplete="name"/>
+                <InputGroupAddon addonType="append">
+                  <InputGroupText><i className="fa fa-user"></i></InputGroupText>
+                </InputGroupAddon>
+              </InputGroup>
+            </FormGroup>
+            <FormGroup>
+              <InputGroup>
+                <Input type="email" id="email2" name="email2" placeholder="Email" autoComplete="username"/>
+                <InputGroupAddon addonType="append">
+                  <InputGroupText><i className="fa fa-envelope"></i></InputGroupText>
+                </InputGroupAddon>
+              </InputGroup>
+            </FormGroup>
+            <FormGroup>
+              <InputGroup>
+                <Input type="password" id="password2" name="password2" placeholder="Password" autoComplete="current-password"/>
+                <InputGroupAddon addonType="append">
+                  <InputGroupText><i className="fa fa-asterisk"></i></InputGroupText>
+                </InputGroupAddon>
+              </InputGroup>
+            </FormGroup>
+            <FormGroup className="form-actions">
+              <Button type="submit" size="sm" color="secondary">Submit</Button>
+            </FormGroup>
+          </Form>
+        </CardBody>
+      </Card>
+    )
+  }
+}
+
+            
+
 class Stream extends Component {
   render() {
     return (
@@ -159,7 +208,10 @@ class Stream extends Component {
             <StreamPlayer videoId="hHW1oY26kxQ"/>
             <StreamPlayer videoId="sPeGGyAfVo0"/>
           </Col>
-          <Tabs/>
+          <Col>
+            <Search/>
+            <Tabs/>
+          </Col>
         </Row>
         <div className="card">
           <div className="card-header">
