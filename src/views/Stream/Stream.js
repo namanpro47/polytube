@@ -152,9 +152,18 @@ class ThemeColor extends Component {
 }
 
 class Search extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      videoId1: "abcdefg",
+    };
+  }
+
+  toggleShow = () => {
+    this.setState(state => ({ videoId1: "changed" }));
+    console.log("Changed videoId");
+  };
   render() {
     return (
       <Card>
@@ -188,7 +197,7 @@ class Search extends Component {
               </InputGroup>
             </FormGroup>
             <FormGroup className="form-actions">
-              <Button type="submit" size="sm" color="secondary">Submit</Button>
+              <Button type="submit" onClick={this.toggleShow} size="sm" color="secondary">Submit</Button>
             </FormGroup>
           </Form>
         </CardBody>
